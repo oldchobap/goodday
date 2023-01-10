@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>sub menu</title>
+        <style>
+            *{
+                margin: 0;
+                padding: 0;
+            }
+            button{
+                background-color: transparent;
+                border: 0;
+            }
+            ul{list-style: none;}
+
+            .item{
+                width: 300px;
+                height: 500px;
+                border: 4px solid #000;
+                margin: 40px auto;
+                padding: 20px;
+                position: relative;
+                overflow: hidden;
+            }
+
+            .item:hover .inner{
+                top: 0;
+            }
+
+            .thum{
+                width: 300px;
+                height: 420px;
+                background-color: cyan;
+            }
+
+            .inner{
+                transition: all 0.5s linear;
+                /* 
+                transition:property duration timming-function 
+                */
+                width: 100%;
+                height: 100%;
+                background-color: rgba(0, 0, 0, 0.8);
+                position: absolute;
+                top: 544px;
+                left: 0;
+                color: #fff;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .inner button{
+                color: #fff;
+                border: 2px solid #fff;
+                padding: 10px 30px;
+                margin-top: 20px;
+            }
+            
+        </style>
+    </head>
+    <body>
+
+        <div class="item">
+            <div class="thum"></div>
+            <div class="txt">
+                <h3>오늘 개봉 영화 제목</h3>
+                <p>오늘 개봉 영화 내용</p>
+            </div><!--txt-->
+
+            <div class="inner">
+                <span>지금 예매하기</span>
+                <button>CGV</button>
+            </div><!--inner-->
+        </div><!--item-->
+
+    </body>
+</html>
